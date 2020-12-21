@@ -10,5 +10,6 @@ class Tutorial(models.Model):
     tutorial_published = models.DateTimeField(
         "date published", default=datetime.now)
 
+    # This acts as an override for the default "view" when the object is called in render()
     def __str__(self):
         return self.tutorial_title
