@@ -27,6 +27,19 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+TINYMCE_DEFAULT_CONFIG = {
+    'selector': 'textarea',
+    'theme': 'modern',
+    'plugins': 'link image preview codesample contextmenu table code lists',
+    'toolbar1': 'formatselect | bold italic underline | alignleft aligncenter alignright alignjustify '
+               '| bullist numlist | outdent indent | table | link image | codesample | preview code',
+    'contextmenu': 'formats | link image',
+    'menubar': False,
+    'inline': False,
+    'statusbar': True,
+    'width': 'auto',
+    'height': 360,
+}
 
 # Application definition
 
@@ -38,6 +51,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main.apps.MainConfig',
+    'tinymce',
 ]
 
 MIDDLEWARE = [
